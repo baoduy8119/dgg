@@ -1,0 +1,255 @@
+#hero-banner {
+    padding: 250px 0;
+    text-align: center;
+    .title {
+        margin-bottom: 200px;
+        font-size: 60px;
+        font-family: $font-primary;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        line-height: 60px;
+        text-shadow: 0px 0px 4px rgba(0, 216, 255, 0.7);
+        line-height: 80px;
+        @media screen and (max-width: 767px) {
+            font-size: 40px;
+            line-height: 60px;
+        }
+        div {
+            background: #ff9300;
+            background: linear-gradient(to right, #ff9300 0%, #ffdf8d 50%, #ff9300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+    }
+    .dgg-btn {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+#story {
+    .dgg-img {
+        margin: 180px auto 0;
+        @media screen and (max-width: 767px) {
+            width: 70%;
+        }
+    }
+    .desc {
+        padding: 160px 0;
+        margin: 0 auto;
+        background: url(../images/circle-bg.png) no-repeat;
+        background-position: center 50px;
+        .text-1 {
+            font-size: 22px;
+            color: #ffd897;
+            line-height: 28px;
+            @media screen and (max-width: 767px) {
+                font-size: 18px;
+            }
+        }
+        .text-2 {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+            line-height: 24px;
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+        p {
+            margin: 25px 0;
+            @media screen and (max-width: 767px) {
+                margin: 20px 0;
+            }
+        }
+        @media screen and (min-width: 991px) {
+            max-width: 960px;
+        }
+    }
+}
+#the-symbol {
+    .symbol-content {
+        position: relative;
+        margin-top: 120px;
+        @media screen and (min-width: 991px) {
+            background: url(../images/the-symbol-bg.png) no-repeat center center;
+            background-size: 100%;
+            min-height: 1100px;
+        }
+        @media screen and (min-width: 1440px) and (max-width: 1900px) {
+            background-size: 140%;
+        }
+        .top-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            &::before {
+                position: absolute;
+                top: -8px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 30px;
+                background: url(../images/symbol-border.png) no-repeat 0 center;
+                background-size: 100%;
+                z-index: 1;
+            }
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100px;
+                content: '';
+                background: rgb(255,255,255);
+                background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(8,14,23,1) 100%);
+            }
+        }
+    }
+    // .hr-line {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 24px;
+    //     width: 100%;
+    //     height: 24px;
+    //     &::before,
+    //     &::after {
+    //         content: '';
+    //         top: 0;
+    //         bottom: 0;
+    //         position: absolute;
+    //         height: 7px;
+    //         background: url(../images/hr-line-bg.png)
+    //     }
+    //     &::before {
+    //         left: 0;
+    //         right: 50%;
+    //     }
+    //     &::after {
+    //         left: 50%;
+    //         right: 0;
+    //     }
+    //     span {
+    //     }
+    // }
+}
+#vision {
+    .vision-items {
+        position: relative;
+        width: 844px;
+        height: 875px;
+        margin: 160px auto 100px;
+        background: url(../images/vision-items-bg.png);
+        font-size: 22px;
+        color: white;
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            transform: scale(0.5) translateX(-50%);
+        }
+        .item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 339px;
+            height: 292px;
+            cursor: pointer;
+            .text-item {
+                padding: 20px 20px;
+                transition: all 0.2s;
+                z-index: 2;
+                // &:hover {
+                //     + .active-item {
+                //         opacity: 1;
+                //         z-index: 2;
+                //     }
+                // }
+            }
+        }
+        .item-1 {
+            position: absolute;
+            top: 146px;
+            left: 0;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+                right: 0;
+            }
+        }
+        .item-2 {
+            position: absolute;
+            top: 0;
+            left: 253px;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .item-3 {
+            position: absolute;
+            top: 145px;
+            right: 0;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .item-4 {
+            position: absolute;
+            top: 435px;
+            right: 0;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .item-5 {
+            position: absolute;
+            bottom: 0;
+            left: 253px;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .item-6 {
+            position: absolute;
+            top: 437px;
+            left: 0;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .item-7 {
+            position: absolute;
+            top: 291px;
+            left: 252px;
+            .active-item {
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .active-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            right: 0;
+            width: 339px;
+            height: 293px;
+            background: url(../images/vision-item-active-bg.png);
+            opacity: 0;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
