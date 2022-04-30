@@ -33,7 +33,66 @@
         margin: 0 auto;
     }
 }
+.float-icon {
+    position: absolute;
+    opacity: 0.5;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+    
+}
+.sun-avatar {
+    width: 233px;
+    height: 233px;
+    background: url(../images/sun-avatar.png) no-repeat;
+    background-size: 233px 233px;
+}
+.star-avatar {
+    width: 169px;
+    height: 169px;
+    background: url(../images/star-avatar.png) no-repeat;
+    background-size: 169px 169px;
+}
+.star-avatar-2 {
+    width: 145px;
+    height: 145px;
+    background: url(../images/star-avatar-2.png) no-repeat;
+    background-size: 145px 145px;
+}
+.star-avatar-3 {
+    width: 126px;
+    height: 126px;
+    background: url(../images/star-avatar-3.png) no-repeat;
+    background-size: 126px 126px;
+}
+.star-avatar-4 {
+    width: 63px;
+    height: 63px;
+    background: url(../images/star-avatar-3.png) no-repeat;
+    background-size: 63px 63px;
+}
+.moon-avatar {
+    width: 154px;
+    height: 179px;
+    background: url(../images/moon-avatar.png) no-repeat;
+    background-size: 154px 179px;
+}
+.moon-avatar-2 {
+    width: 235px;
+    height: 235px;
+    background: url(../images/moon-avatar-2.png) no-repeat;
+    background-size: 235px 235px;
+}
 #story {
+    position: relative;
+    .sun-avatar {
+        left: 50px;
+        top: 180px;
+    }
+    .star-avatar {
+        right: 50px;
+        bottom: 50px;
+    }
     .dgg-img {
         margin: 180px auto 0;
         @media screen and (max-width: 767px) {
@@ -82,9 +141,12 @@
         background-position: -1066px center;
         background-size: 385%;
         @media screen and (min-width: 768px) {
-            background-size: 300%;
+            background-size: 250%;
         }
-        @media screen and (min-width: 991px) {
+        @media screen and (min-width: 1024px) {
+            background-size: 220%;
+        }
+        @media screen and (min-width: 1140px) {
             background-size: 100%;
             min-height: 1100px;
             background-position: center center;
@@ -130,7 +192,7 @@
         }
     }
     .accordion {
-        padding-top: 200px;
+        padding: 200px 0;
         @media screen and (min-width: 992px) {
             max-width: 600px;
         }
@@ -143,8 +205,17 @@
     }
 }
 #vision {
+    position: relative;
     background: url(../images/vision-bg.png) no-repeat bottom center;
     background-size: 100%;
+    .moon-avatar {
+        top: -50px;
+        left: 50px;
+    }
+    .star-avatar-2 {
+        top: 180px;
+        right: 50px;
+    }
     .vision-items {
         position: relative;
         width: 844px;
@@ -250,6 +321,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             position: absolute;
             left: 0;
             bottom: -1px;
@@ -260,6 +332,13 @@
             opacity: 0;
             &.active {
                 opacity: 1;
+                z-index: 2;
+                .title {
+                    text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
+                }
+            }
+            i {
+                margin-top: 20px;
             }
         }
     }
@@ -308,7 +387,7 @@
             .caption-name {
                 font-size: 30px;
                 margin-bottom: 17px;
-                text-shadow: 0px 0px 18px rgba(0, 216, 255, 0.35), -6px 0px 18px rgba(0, 216, 255, 0.35);
+                text-shadow: 0px 0px 8px rgba(0, 216, 255, 0.7), 0px 0px 8px rgba(0, 216, 255, 0.7);
                 @media screen and (max-width: 767px) {
                     margin-bottom: 14px;
                     font-size: 26px;
@@ -326,6 +405,21 @@
                 }
             }
         }
+    }
+}
+#team {
+    position: relative;
+    .star-avatar-3 {
+        top: 100px;
+        left: 50px;
+    }
+    .star-avatar-4 {
+        top: 80px;
+        right: 50px;
+    }
+    .moon-avatar-2 {
+        bottom: 20px;
+        right: 50px;
     }
 }
 .partner {
@@ -509,5 +603,40 @@ main {
         height: 542px;
         background: url(../images/beautiful-shining-stars.png) no-repeat center center;
         z-index: -1;
+    }
+}
+.modal-dialog {
+    max-width: 860px;
+}
+.modal-content {
+    width: 860px;
+    height: 744px;
+    padding: 2px;
+    background: #9b5b0c;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    color: white;
+    h3 {
+        padding: 80px 0 60px;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
+        line-height: 48px;
+    }
+    .desc {
+        font-size: 16px;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    .modal-inner {
+        width: 854px;
+        height: 740px;
+        background: #001432 url(../images/popup-bg.png) no-repeat center -10px;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    .btn {
+        margin-top: 50px;
+        color: white;
+        text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
+        font-size: 30px;
     }
 }

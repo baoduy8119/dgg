@@ -16,6 +16,16 @@ body {
         height: 505px;
         background: url(../images/top-page-effect-bg.png) no-repeat top center;
     }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     top: 200px;
+    //     right: 0;
+    //     bottom: 0;
+    //     background: url(../images/sun-avatar.png) no-repeat 0 center;
+    //     background-attachment: fixed;
+    // }
 }
 .dgg-btn {
     display: inline-block;
