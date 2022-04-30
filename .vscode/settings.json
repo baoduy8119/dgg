@@ -8,5 +8,7 @@
         }
     ],
     "liveSassCompile.settings.generateMap": false,
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "prettier.printWidth": 150,
+    "editor.formatOnSave": true
 }

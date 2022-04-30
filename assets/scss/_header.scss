@@ -9,11 +9,10 @@ header {
     border-bottom: 1px solid #6a7379;
     
     @media screen and (max-width: 1024px) {
-        padding: 0 25px;
+        padding: 8px 25px;
         justify-content: space-between;
     }
     .logo {
-        margin-top: 10px;
         img {
             width: 138px;
             @media screen and (max-width: 991px) {
@@ -37,6 +36,11 @@ header {
             @media screen and (min-width: 1600px) {
                 padding: 0 30px;
             }
+            @media screen and (max-width: 768px) {
+                display: inline-block;
+                padding: 0 30px;
+                font-size: 20px;
+            }
             text-transform: uppercase;
             letter-spacing: 1px;
             &:hover,
@@ -45,13 +49,22 @@ header {
                     content: '';
                     position: absolute;
                     left:50%;
-                    bottom: -36px;
+                    bottom: -31px;
                     transform: translateX(-50%);
                     width: 119px;
                     height: 13px;
                     background: url(../images/menu-bg-active.png) no-repeat;
+                    @media screen and (max-width: 768px) {
+                       bottom: -12px;
+                    }
                 }
             }
+        }
+    }
+    .glow-on-btn {
+        display: flex;
+        @media screen and (max-width: 768px) {
+            display: none;
         }
     }
     .fota-btn {
@@ -77,19 +90,9 @@ header {
             top: 20px;
             left: 20px;
         }
-        .fota-btn {
-            justify-content: center;
-            @media screen and (max-width: 1024px) {
-                margin-right: 20px;
-            }
-            &:first-child {
-                @media screen and (max-width: 1024px) {
-                    margin-bottom: 20px;
-                }
-                @media screen and (min-width: 1025px) {
-                    margin-right: 20px;
-                }
-            }
+        .glow-on-btn {
+            display: block;
+            margin-right: 40px;
         }
         @media screen and (max-width: 1024px) {
             text-align: right;
@@ -116,5 +119,6 @@ header {
     }
     .toggle-menu {
         font-size: 30px;
+        color: white;
     }
 }

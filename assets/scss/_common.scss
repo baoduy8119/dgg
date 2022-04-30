@@ -4,6 +4,9 @@ body {
     font-family: $font-primary;
     letter-spacing: 1px;
     background-size: 100%;
+    @media screen and (max-width: 767px) {
+        background-size: 400%;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -15,6 +18,7 @@ body {
     }
 }
 .dgg-btn {
+    display: inline-block;
     background-color: #081639;
     padding: 8px;
     font-size: 24px;
@@ -23,6 +27,10 @@ body {
     border: 2px solid #30334a;
     letter-spacing: 5px;
     transition: all 0.2s;
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+        padding: 6px;
+    }
     &:hover {
         color: white;
         text-decoration: none;
@@ -42,6 +50,9 @@ body {
         background: linear-gradient(90deg, rgba(69, 34, 2, 1) 0%, rgba(152, 92, 18, 0.748358718487395) 100%);
         display: flex;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            padding: 16px 45px;
+        }
     }
 }
 .border-gradient {
@@ -65,7 +76,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     @media screen and (max-width: 767px) {
-        font-size: 38px;
+        font-size: 34px;
     }
     &::before {
         content: "";
@@ -102,6 +113,9 @@ body {
 }
 .section {
     padding: 100px 0;
+    @media screen and (max-width: 767px) {
+        padding: 50px 0;
+    }
 }
 .hexagon {
     position: relative;
@@ -218,4 +232,116 @@ body {
 }
 img{
     max-width: 100%;
+}
+.accordion {
+    border-top: 1px solid #c4cff3;
+    text-align: left;
+    .card-header {
+        border-radius: 0;
+        padding: 0;
+        .btn {
+            position: relative;
+            padding: 17px 20px;
+            font-size: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 0;
+            @media screen and (max-width: 767px) {
+                font-size: 15px;
+                padding: 14px 17px;
+            }
+            &:focus,
+            &:focus-visible {
+                outline: none;
+                box-shadow: none;
+            }
+            .text,
+            .sprint,
+            .number {
+                transition: all 0.2s;
+            }
+            .sprint {
+                color: #93dded;
+            }
+            &[aria-expanded="false"] {
+                background-color: rgba(0, 20, 50, 0.7);
+            }
+            &[aria-expanded="true"] {
+                .text,
+                .sprint {
+                    color: white;
+                    text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00, 0px 0px 15px #ff6c00;
+                }
+                .number {
+                    background-color: #ffb233;
+                    color: #8b4100;
+                    box-shadow: 0px 0px 21px 7px rgba(255, 108, 0, 0.75);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    height: 500px;
+                    background: #001432 url(../images/accordion-content-bg.png) no-repeat 0 0;
+                    @media screen and (max-width: 767px) {
+                        background-size: 360px;
+                    }
+                }
+            }
+        }
+    }
+    .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #c0cbd3;
+        font-size: 20px;
+        margin-right: 20px;
+        color: #00317a;
+        letter-spacing: 0;
+        @media screen and (max-width: 767px) {
+            margin-right: 15px;
+        }
+    }
+    .card-body {
+        padding: 10px 44px;
+        color: white;
+        font-size: 16px;
+        font-family: $font-secondary;
+        @media screen and (max-width: 767px) {
+            padding: 7px 30px;
+            font-size: 14px;
+        }
+    }
+    .card-wrapper {
+        // background: #001432 url(../images/accordion-content-bg.png) no-repeat 0 0;
+        border: 1px solid #c4cff3;
+        border-left: 2px solid #c4cff3;
+        border-right: 2px solid #c4cff3;
+        overflow: hidden;
+        &:first-child {
+            border-top: 2px solid #c4cff3;
+        }
+        &:last-child {
+            border-bottom: 2px solid #c4cff3;
+        }
+    }
+}
+.sink-effect {
+    transition: transform 0.3s;
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
 }

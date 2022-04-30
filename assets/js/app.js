@@ -24,4 +24,11 @@ $(document).ready(function () {
         $('.vision-items .active-item').removeClass('active')
         $(this).next().addClass('active')
     })
+    $(".toggle-menu").on("click", function (e) {
+        e.preventDefault()
+        $(".nav-mobile").toggleClass("show")
+    })
+    $(document).on("click", function (t) {
+        0 !== $("header").has(t.target).length && 1 !== $(".btn-close").has(t.target).length || $(".nav-mobile").removeClass("show")
+    })
 });
