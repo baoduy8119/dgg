@@ -39,7 +39,6 @@
     @media screen and (max-width: 1024px) {
         display: none;
     }
-    
 }
 .sun-avatar {
     width: 233px;
@@ -436,7 +435,6 @@
             @media screen and (max-width: 767px) {
                 font-size: 26px;
             }
-            
         }
         img {
             @media screen and (max-width: 767px) {
@@ -454,15 +452,14 @@
         padding-right: 30px;
         flex: 0 0 50%;
         max-width: 50%;
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: 992px) {
             flex: 0 0 20%;
             max-width: 20%;
         }
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 992px) {
             margin: 20px 0;
         }
-        
-        
+
         .alliance-content {
             display: inline-block;
             position: relative;
@@ -485,9 +482,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
             @media screen and (max-width: 767px) {
-                font-size: 20px
+                font-size: 20px;
             }
-            
         }
     }
 }
@@ -607,6 +603,13 @@ main {
 }
 .modal-dialog {
     max-width: 860px;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+        width: 700px
+    }
+    @media screen and (max-width: 767px) {
+        max-width: 360px;
+    }
 }
 .modal-content {
     width: 860px;
@@ -615,28 +618,69 @@ main {
     background: #9b5b0c;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     color: white;
+    @media screen and (max-width: 1024px) {
+        width: 700px;
+        height: 606px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 375px;
+        height: 360px;
+    }
+
     h3 {
         padding: 80px 0 60px;
         font-size: 30px;
         text-transform: uppercase;
         text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
         line-height: 48px;
+        @media screen and (max-width: 1024px) {
+            padding: 30px;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 20px;
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
     .desc {
         font-size: 16px;
         max-width: 70%;
         margin: 0 auto;
+        @media screen and (max-width: 1024px) {
+            height: 304px;
+        }
+        @media screen and (max-width: 767px) {
+            height: 180px;
+            font-size: 12px;
+            overflow-y: auto;
+        }
     }
     .modal-inner {
         width: 854px;
         height: 740px;
         background: #001432 url(../images/popup-bg.png) no-repeat center -10px;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        @media screen and (max-width: 1024px) {
+            width: 694px;
+            height: 600px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            width: 369px;
+            height: 354px;
+        }
     }
     .btn {
         margin-top: 50px;
         color: white;
         text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
         font-size: 30px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 0;
+            margin-top: 5px;
+        }
     }
 }

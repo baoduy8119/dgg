@@ -43,6 +43,7 @@ header {
             }
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: all 0.2s;
             &:hover,
             &.active {
                 text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
