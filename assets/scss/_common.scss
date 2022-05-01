@@ -51,7 +51,7 @@ body {
         filter: brightness(120%) saturate(120%);
     }
     i {
-        font-size: 30px;
+        font-size: 26px;
         margin-right: 10px;
     }
     span {
@@ -79,12 +79,30 @@ body {
     font-size: 60px;
     letter-spacing: 5px;
     background: #ff9300;
-    background: linear-gradient(to right, #ff9300 0%, #ffdf8d 60%, #ffae38 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
+    // background: linear-gradient(to right, #ff9300 0%, #ffdf8d 60%, #ffae38 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // text-shadow: none;
     text-transform: uppercase;
     text-align: center;
+    
+        
+    background: linear-gradient(to left, #ffdf8d 0% #ff9300 20%, #ffdf8d 40%, #ffae38 70%, #ffdf8d 100%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 4s linear infinite;
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+    
     @media screen and (max-width: 767px) {
         font-size: 32px;
     }
