@@ -103,8 +103,9 @@
 }
 #story {
     position: relative;
-    background: url(../images/circle-bg.png) no-repeat;
-    background-position: center 270px;
+    background: url(../images/beautiful-shining-stars-night-sky.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
     .sun-avatar {
         left: 50px;
         top: 480px;
@@ -112,6 +113,10 @@
     .star-avatar {
         right: 50px;
         bottom: 50px;
+    }
+    .dgg-container {
+        background: url(../images/circle-bg.png) no-repeat;
+        background-position: center 270px;
     }
     .dgg-img {
         margin: 180px auto 100px;
@@ -758,10 +763,14 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
     height: 100vh;
-    z-index: 3;
-    overflow: scroll;
+    z-index: 1040;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: url(../images/space-bg.png) no-repeat center center;
+    background-size: 100%;
+    
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -773,20 +782,21 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    height: 600vh;
+    height: 11000px;
+    transform: translate3d(0, 0, 0);
 }
 .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    background: url(../images/space-bg.png) no-repeat center center;
-    background-size: 110%;
-    overflow: hidden;
-    @media screen and (max-width: 768px) {
-        background-size: 245%;
-    }
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100vh;
+    // // background: url(../images/space-bg.png) no-repeat center center;
+    // background-size: 110%;
+    // overflow: hidden;
+    // @media screen and (max-width: 768px) {
+    //     background-size: 245%;
+    // }
     
 }
 .scroll {
@@ -833,7 +843,4 @@ main {
     right: 0;
     height: 100vh;
     background: transparent
-}
-.test {
-    height: 100vh;
 }

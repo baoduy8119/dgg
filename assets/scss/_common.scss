@@ -3,6 +3,9 @@ body {
     background: #080e17;
     font-family: $font-primary;
     letter-spacing: 1px;
+    &.banner-active {
+        overflow: hidden;
+    }
     @media screen and (max-width: 767px) {
         background-size: 400%;
     }
