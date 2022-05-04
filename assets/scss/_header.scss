@@ -3,10 +3,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 30px;
+    padding: 21px 30px;
     z-index: 100;
     background: rgba(0, 0, 0, 0.6);
     border-bottom: 1px solid #6a7379;
+    transition: all 0.3s;
+    transform: translateY(-100%);
+    backdrop-filter: blur(5px);
+    &.show {
+        transform: translateY(0);
+    }
     
     @media screen and (max-width: 1024px) {
         padding: 8px 25px;
@@ -23,7 +29,7 @@ header {
     .nav {
         font-family: $font-secondary;
         @media screen and (min-width: 992px) {
-            margin: 0 20px;
+            margin: 0 auto;
             font-size: 18px;
         }
         .nav-link {
@@ -53,9 +59,9 @@ header {
                     left:50%;
                     bottom: -29px;
                     transform: translateX(-50%);
-                    width: 119px;
-                    height: 13px;
-                    background: url(../images/menu-bg-active.png) no-repeat;
+                    width: 127px;
+                    height: 35px;
+                    background: url(../images/nav-tabs-effect-bottom.png);
                     @media screen and (max-width: 768px) {
                        bottom: -12px;
                     }

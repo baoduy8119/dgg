@@ -1,31 +1,11 @@
 body {
     position: relative;
-    background: #080e17 url(../images/top-page-bg.png) no-repeat top center;
+    background: #080e17;
     font-family: $font-primary;
     letter-spacing: 1px;
-    background-size: 100%;
     @media screen and (max-width: 767px) {
         background-size: 400%;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 505px;
-        background: url(../images/top-page-effect-bg.png) no-repeat top center;
-    }
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     left: 0;
-    //     top: 200px;
-    //     right: 0;
-    //     bottom: 0;
-    //     background: url(../images/sun-avatar.png) no-repeat 0 center;
-    //     background-attachment: fixed;
-    // }
 }
 .dgg-btn {
     display: inline-block;
@@ -41,6 +21,13 @@ body {
     @media screen and (max-width: 767px) {
         font-size: 20px;
         padding: 6px;
+    }
+    &.small {
+        padding: 2px;
+        font-size: 18px;
+        span {
+            padding: 10px 30px;
+        }
     }
     &:hover {
         color: white;
@@ -85,43 +72,42 @@ body {
     // text-shadow: none;
     text-transform: uppercase;
     text-align: center;
-    
-        
+
     background: linear-gradient(to left, #ffdf8d 0% #ff9300 20%, #ffdf8d 40%, #ffae38 70%, #ffdf8d 100%);
     background-size: 200% auto;
-    
+
     color: #000;
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
     animation: shine 4s linear infinite;
     @keyframes shine {
         to {
             background-position: 200% center;
         }
     }
-    
+
     @media screen and (max-width: 767px) {
         font-size: 32px;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        top: -150px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 560px;
-        height: 315px;
-        background: url(../images/heading-bg-1.png);
-        @media screen and (max-width: 767px) {
-            top: -76px;
-            width: 300px;
-            height: 169px;
-            background-size: 100%;
-        }
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: -150px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 560px;
+    //     height: 315px;
+    //     background: url(../images/heading-bg-1.png);
+    //     @media screen and (max-width: 767px) {
+    //         top: -76px;
+    //         width: 300px;
+    //         height: 169px;
+    //         background-size: 100%;
+    //     }
+    // }
     &::after {
         content: "";
         position: absolute;
@@ -217,23 +203,23 @@ body {
 }
 
 .glow-on-btn:before {
-    content: '';
+    content: "";
     background: linear-gradient(45deg, #ff8a00, #e9a658, #e4cb3e, #b66509, #e6cd2a);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     border: 2px solid #fff;
 }
 
 .glow-on-btn:active {
-    color: #000
+    color: #000;
 }
 
 .glow-on-btn:active:after {
@@ -242,7 +228,7 @@ body {
 
 .glow-on-btn:after {
     z-index: -1;
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -252,17 +238,23 @@ body {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
-.mt-100{
+.mt-100 {
     margin-top: 140px;
 }
-.mt-80{
+.mt-80 {
     margin-top: 80px;
 }
-img{
+img {
     max-width: 100%;
 }
 .accordion {
@@ -375,5 +367,442 @@ img{
 a {
     &:hover {
         text-decoration: none;
+    }
+}
+.smoke-effect {
+    position: absolute;
+    top: -169px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 860px;
+    height: 430px;
+}
+.nav-tabs {
+    border: none;
+    .nav-link {
+        position: relative;
+        color: white;
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        &.active,
+        &:hover,
+        &:focus-visible,
+        &:focus {
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+        }
+        &.active,
+        &:hover {
+            text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
+        }
+        &.active {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -30px;
+                transform: translateX(-50%);
+                width: 127px;
+                height: 35px;
+                background: url(../images/nav-tabs-effect-bottom.png);
+            }
+        }
+    }
+}
+$pi: 3.14159265359;
+$_precision: 10;
+
+@function pow($base, $exp) {
+    $value: $base;
+    @if $exp > 1 {
+        @for $i from 2 through $exp {
+            $value: $value * $base;
+        }
+    }
+    @if $exp < 1 {
+        @for $i from 0 through -$exp {
+            $value: $value / $base;
+        }
+    }
+    @return $value;
+}
+
+@function fact($num) {
+    $fact: 1;
+    @if $num > 0 {
+        @for $i from 1 through $num {
+            $fact: $fact * $i;
+        }
+    }
+    @return $fact;
+}
+
+@function _to_unitless_rad($angle) {
+    @if unit($angle) == "deg" {
+        $angle: $angle / 180deg * $pi;
+    }
+    @if unit($angle) == "rad" {
+        $angle: $angle / 1rad;
+    }
+    @return $angle;
+}
+
+@function sin($angle) {
+    $a: _to_unitless_rad($angle);
+    $sin: $a;
+    @for $n from 1 through $_precision {
+        $sin: $sin + (pow(-1, $n) / fact(2 * $n + 1)) * pow($a, (2 * $n + 1));
+    }
+    @return $sin;
+}
+
+@function cos($angle) {
+    $a: _to_unitless_rad($angle);
+    $cos: 1;
+    @for $n from 1 through $_precision {
+        $cos: $cos + (pow(-1, $n) / fact(2 * $n)) * pow($a, 2 * $n);
+    }
+    @return $cos;
+}
+
+@function tan($angle) {
+    @return sin($angle) / cos($angle);
+}
+
+@function reminder($origin, $mod) {
+    $q: if(($origin / $mod) > 0, floor($origin / $mod), ceil($origin / $mod));
+    @return $origin - ($mod * $q);
+}
+
+
+.stars-outer {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(0, 10, 24) 100%);
+}
+
+#stars-sky {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stars-star {
+    opacity: 0;
+    transform-origin: 0, 0;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgb(255, 255, 255);
+    border-radius: 100%;
+    animation-timing-function: linear, linear !important;
+    animation-iteration-count: infinite, infinite !important;
+    animation-delay: -30s, -30s !important;
+}
+
+.stars-size-1 {
+    width: 2px;
+    height: 2px;
+}
+
+.stars-size-2 {
+    width: 3px;
+    height: 3px;
+}
+
+.stars-size-3 {
+    width: 4px;
+    height: 4px;
+}
+
+@for $i from 1 to 360 {
+    $t: random(40000) + 5000;
+    $angle: $i - reminder($i, 4);
+    .stars-axis-#{$i} {
+        animation: anim#{$angle} #{$t}ms, fade#{random(10)} #{$t}ms;
+    }
+}
+
+// FADE EFFECT
+@for $i from 1 to 11 {
+    $start: random(20);
+    $end: $start + 10;
+    @keyframes fade#{$i} {
+        #{$start + "%"} {
+            opacity: 0;
+        }
+        #{$end + "%"} {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+// MOVE ANIMATION
+@for $i from 1 to 91 {
+    $a: $i * 4;
+    @keyframes anim#{$a} {
+        $angle: $pi * 2 * ($a / 360);
+        $y: 80 * sin($angle);
+        $x: 80 * cos($angle);
+        100% {
+            transform: translate(#{$x}vw, #{$y}vh);
+        }
+    }
+}
+
+$colorBg: #222a30;
+$colorOutline: #ccc;
+$colorOutlineFade: #71828a;
+
+$widthMouse: 52px;
+$heightMouse: 88px;
+$borderMouse: 6px;
+
+$posMouse: 8px;
+$posText: 2px;
+
+$sizeTrackball: 10px;
+$posTrackball: 20px;
+$shrinkTrackball: 0.4;
+
+$animDuration: 5s;
+
+@mixin bgGradient {
+    background: $colorOutlineFade linear-gradient(transparent 0%, transparent 50%, $colorOutline 50%, $colorOutline 100%);
+}
+
+.scroll-text .text {
+    margin-top: 50px;
+    font-family: "Cabin", sans-serif;
+    letter-spacing: 12px;
+    text-indent: 12px;
+    color: $colorOutline;
+    animation: nudgeText $animDuration ease-out infinite;
+}
+
+.mouse {
+    @include bgGradient;
+    position: relative;
+    width: $widthMouse;
+    height: $heightMouse;
+    margin: 0 auto 40px;
+    border-radius: 100px;
+    background-size: 100% 200%;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+    animation: colorSlide $animDuration linear infinite, nudgeMouse $animDuration ease-out infinite;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    &:before {
+        width: $widthMouse - $borderMouse;
+        height: $heightMouse - $borderMouse;
+        background-color: $colorBg;
+        border-radius: 100px;
+    }
+    &:after {
+        background-color: $colorOutline;
+        width: $sizeTrackball;
+        height: $sizeTrackball;
+        border-radius: 100%;
+        animation: trackBallSlide $animDuration linear infinite;
+    }
+}
+
+@keyframes colorSlide {
+    0% {
+        background-position: 0% 100%;
+    }
+    20% {
+        background-position: 0% 0%;
+    }
+    21% {
+        background-color: $colorOutlineFade;
+    }
+    29.99% {
+        background-color: $colorOutline;
+        background-position: 0% 0%;
+    }
+    30% {
+        background-color: $colorOutlineFade;
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    51% {
+        background-color: $colorOutlineFade;
+    }
+    59% {
+        background-color: $colorOutline;
+        background-position: 0% 0%;
+    }
+    60% {
+        background-color: $colorOutlineFade;
+        background-position: 0% 100%;
+    }
+    80% {
+        background-position: 0% 0%;
+    }
+    81% {
+        background-color: $colorOutlineFade;
+    }
+    90%,
+    100% {
+        background-color: $colorOutline;
+    }
+}
+
+@keyframes trackBallSlide {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+    6% {
+        opacity: 1;
+        transform: scale(0.9) translateY($posTrackball/4);
+    }
+    14% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY($posTrackball * 2);
+    }
+    15%,
+    19% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY(-$posTrackball);
+    }
+    28%,
+    29.99% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+    36% {
+        opacity: 1;
+        transform: scale(0.9) translateY($posTrackball/4);
+    }
+    44% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY($posTrackball * 2);
+    }
+    45%,
+    49% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY(-$posTrackball);
+    }
+    58%,
+    59.99% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+    66% {
+        opacity: 1;
+        transform: scale(0.9) translateY($posTrackball/4);
+    }
+    74% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY($posTrackball * 2);
+    }
+    75%,
+    79% {
+        opacity: 0;
+        transform: scale($shrinkTrackball) translateY(-$posTrackball);
+    }
+    88%,
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(-$posTrackball);
+    }
+}
+
+@keyframes nudgeMouse {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY($posMouse);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY($posMouse);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY($posMouse);
+    }
+    90% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes nudgeText {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY($posText);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY($posText);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY($posText);
+    }
+    90% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorText {
+    21% {
+        color: $colorOutlineFade;
+    }
+    30% {
+        color: $colorOutline;
+    }
+    51% {
+        color: $colorOutlineFade;
+    }
+    60% {
+        color: $colorOutline;
+    }
+    81% {
+        color: $colorOutlineFade;
+    }
+    90% {
+        color: $colorOutline;
     }
 }

@@ -20,6 +20,9 @@ jQuery.event.special.mousewheel = {
 };
 
 $(document).ready(function () {
+    // $(window).load(function() {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    // })
     $(".vision-items .text-item").mouseover(function () {
         $(".vision-items .active-item").removeClass("active");
         $(this).next().addClass("active");
@@ -46,4 +49,97 @@ $(document).ready(function () {
             );
         }
     });
+
+    for (var i = 1; i <= 8; i++) {
+        new spine.SpinePlayer(`smoke-effect-${i}`, {
+            jsonUrl: "assets/js/spine/smoke-web.json",
+            atlasUrl: "assets/js/spine/smoke-web.atlas",
+            alpha: true,
+            backgroundColor: "#00000000",
+            animation: "animation",
+            showControls: false,
+        });
+    }
+    $.fn.moveIt = function () {
+        var $window = $(window);
+        var instances = [];
+
+        $(this).each(function () {
+            instances.push(new moveItItem($(this)));
+        });
+
+        window.addEventListener(
+            "scroll",
+            function () {
+                var scrollTop = $window.scrollTop();
+                instances.forEach(function (inst) {
+                    inst.update(scrollTop);
+                });
+            },
+            { passive: true }
+        );
+    };
+
+    var moveItItem = function (el) {
+        this.el = $(el);
+        this.speed = parseInt(this.el.attr("data-scroll-speed"));
+    };
+
+    moveItItem.prototype.update = function (scrollTop) {
+        this.el.css("transform", "translateY(" + -(scrollTop / this.speed) + "px)");
+    };
+
+    $("[data-scroll-speed]").moveIt();
+
+    $("#space-bg").scroll(function (e) {
+        var h = $(window).height();
+        var w = $(window).width();
+        var bgs = 110;
+        if (w <= 768) {
+            bgs= 245
+        }
+        $("#space-bg .bg").css("opacity", 1 - $(this).scrollTop() / 700);
+        $(".stars-outer").css("opacity", 1 - $(this).scrollTop() / 800);
+        $("#space-bg .bg").css("background-size", `${bgs + $(this).scrollTop() / 50}%`);
+        if (1 - $(this).scrollTop() / 700 < 0) {
+            $("header").addClass("show");
+            $(".hero-container").addClass("show");
+        }
+        if ($(this).scrollTop() > 100) {
+            $(".scroll-text").addClass("hide");
+        }
+        if ($(this).scrollTop() > h) {
+            $('#space-bg').remove();    
+        }
+    });
+
+    function getCenter(sky) {
+        const w = sky.clientWidth;
+        const h = sky.clientHeight;
+        return {
+            x: parseInt(w / 2),
+            y: parseInt(h / 2),
+        };
+    }
+
+    function getDot(x, y, group) {
+        const size = Math.round(Math.random() + 2);
+        const dot = document.createElement("span");
+        dot.classList.add("stars-star", `stars-axis-${group}`, `stars-size-${size}`);
+        dot.style.top = `${y}px`;
+        dot.style.left = `${x}px`;
+        return dot.cloneNode();
+    }
+
+    function init() {
+        const sky = document.querySelector("#stars-sky");
+        sky.innerHTML = "";
+        for (let i = 1; i < 360; i++) {
+            const { x, y } = getCenter(sky);
+            const dot = getDot(x, y, i);
+            sky.appendChild(dot);
+        }
+    }
+
+    init();
 });

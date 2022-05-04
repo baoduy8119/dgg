@@ -26,6 +26,24 @@
     </head>
 
     <body>
+        <div id="space-bg">
+            <div class="bg-wrapper">
+                <div class="bg">
+                </div>
+                <div class="scroll-text">
+                    <div class="inner">
+                        <div class="mouse"></div>
+                        <div class="text">
+                            Scroll Down To Continue
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll"></div>
+                <div class="stars-outer">
+                    <div id="stars-sky"></div>
+                </div>
+            </div>
+        </div>
         <header class="header d-flex align-items-center">
             <a href="/" class="logo d-flex align-items-center text-decoration-none">
                 <img src="assets/images/logo.png" alt="" />
@@ -43,250 +61,268 @@
                     <li>
                         <a href="#story" class="nav-link active">Our Story</a>
                     </li>
-                    <li><a href="#the-symbol" class="nav-link">The Symbol</a></li>
-                    <li><a href="#vision" class="nav-link">The Vision</a></li>
-                    <li><a href="#team" class="nav-link">The Team</a></li>
+                    <li><a href="#vision" class="nav-link">Vision</a></li>
+                    <li><a href="#team" class="nav-link">DJINN Team</a></li>
                     <li><a href="#advisor" class="nav-link">Advisors</a></li>
                     <li><a href="#partner" class="nav-link">Parners</a></li>
                     <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                    <li><a href="#events" class="nav-link">Event</a></li>
+                    <li><a href="#knowledge" class="nav-link">Knowledge</a></li>
                 </ul>
-                <div class="d-xl-flex text-end ml-auto">
-                    <a href="#" target="_blank" class="d-flex align-items-center justify-content-center glow-on-btn">Whitepaper</a>
+                <div class="d-xl-flex text-end">
+                    <a href="#" class="dgg-btn small sink-effect">
+                        <span class="border-gradient border-gradient-purple">Whitepaper</span>
+                    </a>
                 </div>
             </div>
             <div class="d-none .d-sm-block text-end ml-auto">
-                <a href="#" target="_blank" class="align-items-center justify-content-center glow-on-btn">Whitepaper</a>
+                <a href="#" target="_blank" class="align-items-center justify-content-center glow-on-btn">Whitepaper1</a>
             </div>
         </header>
         <main class="position-relative">
             <section id="hero-banner">
-                <div class="dgg-container">
-                    <h1 class="title text-center">
-                        “open your mind and you will see
-                        <div>the collateral universe</div>
-                        we’re building”
-                    </h1>
-                    <a href="#" class="dgg-btn sink-effect">
-                        <span class="border-gradient border-gradient-purple"> <i class="far fa-arrow-alt-circle-down"></i> Explore </span>
-                    </a>
+                <video class="lazy img-fluid" src="assets/images/djinn-hero.mp4" muted autoplay loop playsinline></video>
+                <div class="hero-container">
+                    <div class="dgg-container">
+                        <h1 class="title text-center">
+                            “open your mind<br />
+                            and you will see
+                            <div>
+                                the collateral<br />
+                                universe
+                            </div>
+                            we’re building”
+                        </h1>
+                    </div>
                 </div>
             </section>
-            <section id="story" class="text-center section">
-                <div class="sun-avatar float-icon"></div>
-                <div class="star-avatar float-icon"></div>
+            <section id="story" class="section">
+                <div class="sun-avatar float-icon" data-scroll-speed="2"></div>
+                <div class="star-avatar float-icon" data-scroll-speed="2"></div>
                 <div class="container">
-                    <h2 class="heading-1">Our Story</h2>
-                    <div class="dgg-img">
+                    <h2 class="heading-1">
+                        <div id="smoke-effect-1" class="smoke-effect"></div>
+                        Our Story
+                    </h2>
+                    <div class="dgg-img text-center">
                         <img src="assets/images/dgg.png" class="img-fluid" alt="" />
                     </div>
-                    <div class="desc">
-                        <div class="text-1">
-                            Djinn Guild Games is a gaming community that brings gamers together<br />
-                            - as brothers and sisters - to nurture talents, earn, and enjoy the fun of gaming.
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="story-box">
+                                <span class="label">Story</span>
+                                <div class="text-1">
+                                    Djinn Guild Games is a gaming community that brings gamers together<br />
+                                    - as brothers and sisters - to nurture talents, earn, and enjoy the fun of gaming.
+                                </div>
+                                <div class="text-2">
+                                    <p>
+                                        With a great passion, a visionary mindset, and a profound understanding of Symbology, Djinn's Guild Master has
+                                        inspired the creation of the guild's logo.
+                                    </p>
+                                    <p>
+                                        What makes the image meaningful and unique is the story behind it. Each and every detail of the logo possesses
+                                        a moral lesson. Those details, no matter how easily visible they are or vice versa, hold meaningful messages
+                                        that represent the mission, vision, and core values of Djinn Guild Games.
+                                    </p>
+                                    <p>
+                                        The Djinn are shape-shifting spirits that were born from fire and air. Some of them possess supernatural
+                                        powers, making mortals worship them as gods. The Djinn, along with his magical lamp, represents that Djinn
+                                        Guild is a place where wishes come true, where desires are satisfied, and goals are met.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-2">
-                            <p>
-                                With a great passion, a visionary mindset, and a profound understanding of Symbology, Djinn's Guild Master has
-                                inspired the creation of the guild's logo.
-                            </p>
-                            <p>
-                                What makes the image meaningful and unique is the story behind it. Each and every detail of the logo possesses a moral
-                                lesson. Those details, no matter how easily visible they are or vice versa, hold meaningful messages that represent
-                                the mission, vision, and core values of Djinn Guild Games.
-                            </p>
-                            <p>
-                                The Djinn are shape-shifting spirits that were born from fire and air. Some of them possess supernatural powers,
-                                making mortals worship them as gods. The Djinn, along with his magical lamp, represents that Djinn Guild is a place
-                                where wishes come true, where desires are satisfied, and goals are met.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="the-symbol" class="section">
-                <h2 class="heading-1">The Symbol</h2>
-                <div class="symbol-content">
-                    <div class="top-line"></div>
-                    <div class="top-line bottom"></div>
-                    <div class="dgg-container">
-                        <div class="accordion" id="accordionExample">
-                            <div class="card-wrapper">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button
-                                            class="btn btn-block text-left collapsed"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseSymbolOne"
-                                            aria-expanded="false"
-                                            aria-controls="collapseSymbolOne"
-                                        >
-                                            <div class="position-relative z-index-1">
-                                                <div class="d-inline-block">
-                                                    <span class="number">I</span>
+                        <div class="col-sm-6">
+                            <div class="accordion" id="storyAccordion">
+                                <div class="card-wrapper">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-block text-left collapsed"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSymbolOne"
+                                                aria-expanded="false"
+                                                aria-controls="collapseSymbolOne"
+                                            >
+                                                <div class="position-relative z-index-1">
+                                                    <div class="d-inline-block">
+                                                        <span class="number">I</span>
+                                                    </div>
+                                                    <span class="text">the ponytail</span>
                                                 </div>
-                                                <span class="text">the ponytail</span>
-                                            </div>
-                                        </button>
-                                    </h2>
-                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseSymbolOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body position-relative z-index-1">
-                                        <p>His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.</p>
-                                        <p>
-                                            The eyes without pupils represent impartiality so that members will always look for the truth, to stay
-                                            factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
-                                            across as having blind eyes.
-                                        </p>
-                                        <p>
-                                            Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
-                                            listening and understanding of any situation.
-                                        </p>
+                                    <div id="collapseSymbolOne" class="collapse" aria-labelledby="headingOne" data-parent="#storyAccordion">
+                                        <div class="card-body position-relative z-index-1">
+                                            <p>
+                                                His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.
+                                            </p>
+                                            <p>
+                                                The eyes without pupils represent impartiality so that members will always look for the truth, to stay
+                                                factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
+                                                across as having blind eyes.
+                                            </p>
+                                            <p>
+                                                Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
+                                                listening and understanding of any situation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrapper">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button
-                                            class="btn btn-block text-left"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseSymbolTwo"
-                                            aria-expanded="true"
-                                            aria-controls="collapseSymbolTwo"
-                                        >
-                                            <div class="position-relative z-index-1">
-                                                <div class="d-inline-block">
-                                                    <span class="number">II</span>
+                                <div class="card-wrapper">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-block text-left"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSymbolTwo"
+                                                aria-expanded="true"
+                                                aria-controls="collapseSymbolTwo"
+                                            >
+                                                <div class="position-relative z-index-1">
+                                                    <div class="d-inline-block">
+                                                        <span class="number">II</span>
+                                                    </div>
+                                                    <span class="text">eyes & earings</span>
                                                 </div>
-                                                <span class="text">eyes & earings</span>
-                                            </div>
-                                        </button>
-                                    </h2>
-                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseSymbolTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body position-relative z-index-1">
-                                        <p>His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.</p>
-                                        <p>
-                                            The eyes without pupils represent impartiality so that members will always look for the truth, to stay
-                                            factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
-                                            across as having blind eyes.
-                                        </p>
-                                        <p>
-                                            Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
-                                            listening and understanding of any situation.
-                                        </p>
+                                    <div id="collapseSymbolTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#storyAccordion">
+                                        <div class="card-body position-relative z-index-1">
+                                            <p>
+                                                His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.
+                                            </p>
+                                            <p>
+                                                The eyes without pupils represent impartiality so that members will always look for the truth, to stay
+                                                factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
+                                                across as having blind eyes.
+                                            </p>
+                                            <p>
+                                                Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
+                                                listening and understanding of any situation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrapper">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button
-                                            class="btn btn-block text-left collapsed"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseSymbolThree"
-                                            aria-expanded="false"
-                                            aria-controls="collapseSymbolThree"
-                                        >
-                                            <div class="position-relative z-index-1">
-                                                <div class="d-inline-block">
-                                                    <span class="number">III</span>
+                                <div class="card-wrapper">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-block text-left collapsed"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSymbolThree"
+                                                aria-expanded="false"
+                                                aria-controls="collapseSymbolThree"
+                                            >
+                                                <div class="position-relative z-index-1">
+                                                    <div class="d-inline-block">
+                                                        <span class="number">III</span>
+                                                    </div>
+                                                    <span class="text">the mustache</span>
                                                 </div>
-                                                <span class="text">the mustache</span>
-                                            </div>
-                                        </button>
-                                    </h2>
-                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseSymbolThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body position-relative z-index-1">
-                                        <p>His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.</p>
-                                        <p>
-                                            The eyes without pupils represent impartiality so that members will always look for the truth, to stay
-                                            factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
-                                            across as having blind eyes.
-                                        </p>
-                                        <p>
-                                            Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
-                                            listening and understanding of any situation.
-                                        </p>
+                                    <div id="collapseSymbolThree" class="collapse" aria-labelledby="headingOne" data-parent="#storyAccordion">
+                                        <div class="card-body position-relative z-index-1">
+                                            <p>
+                                                His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.
+                                            </p>
+                                            <p>
+                                                The eyes without pupils represent impartiality so that members will always look for the truth, to stay
+                                                factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
+                                                across as having blind eyes.
+                                            </p>
+                                            <p>
+                                                Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
+                                                listening and understanding of any situation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrapper">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button
-                                            class="btn btn-block text-left collapsed"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseSymbolFour"
-                                            aria-expanded="false"
-                                            aria-controls="collapseSymbolFour"
-                                        >
-                                            <div class="position-relative z-index-1">
-                                                <div class="d-inline-block">
-                                                    <span class="number">IV</span>
+                                <div class="card-wrapper">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-block text-left collapsed"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSymbolFour"
+                                                aria-expanded="false"
+                                                aria-controls="collapseSymbolFour"
+                                            >
+                                                <div class="position-relative z-index-1">
+                                                    <div class="d-inline-block">
+                                                        <span class="number">IV</span>
+                                                    </div>
+                                                    <span class="text">jewelry & garments</span>
                                                 </div>
-                                                <span class="text">jewelry & garments</span>
-                                            </div>
-                                        </button>
-                                    </h2>
-                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseSymbolFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body position-relative z-index-1">
-                                        <p>His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.</p>
-                                        <p>
-                                            The eyes without pupils represent impartiality so that members will always look for the truth, to stay
-                                            factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
-                                            across as having blind eyes.
-                                        </p>
-                                        <p>
-                                            Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
-                                            listening and understanding of any situation.
-                                        </p>
+                                    <div id="collapseSymbolFour" class="collapse" aria-labelledby="headingOne" data-parent="#storyAccordion">
+                                        <div class="card-body position-relative z-index-1">
+                                            <p>
+                                                His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.
+                                            </p>
+                                            <p>
+                                                The eyes without pupils represent impartiality so that members will always look for the truth, to stay
+                                                factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
+                                                across as having blind eyes.
+                                            </p>
+                                            <p>
+                                                Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
+                                                listening and understanding of any situation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-wrapper">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button
-                                            class="btn btn-block text-left collapsed"
-                                            type="button"
-                                            data-toggle="collapse"
-                                            data-target="#collapseSymbolFive"
-                                            aria-expanded="false"
-                                            aria-controls="collapseSymbolFive"
-                                        >
-                                            <div class="position-relative z-index-1">
-                                                <div class="d-inline-block">
-                                                    <span class="number">V</span>
+                                <div class="card-wrapper">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-block text-left collapsed"
+                                                type="button"
+                                                data-toggle="collapse"
+                                                data-target="#collapseSymbolFive"
+                                                aria-expanded="false"
+                                                aria-controls="collapseSymbolFive"
+                                            >
+                                                <div class="position-relative z-index-1">
+                                                    <div class="d-inline-block">
+                                                        <span class="number">V</span>
+                                                    </div>
+                                                    <span class="text">surrounding environment</span>
                                                 </div>
-                                                <span class="text">surrounding environment</span>
-                                            </div>
-                                        </button>
-                                    </h2>
-                                </div>
+                                            </button>
+                                        </h2>
+                                    </div>
 
-                                <div id="collapseSymbolFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body position-relative z-index-1">
-                                        <p>His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.</p>
-                                        <p>
-                                            The eyes without pupils represent impartiality so that members will always look for the truth, to stay
-                                            factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
-                                            across as having blind eyes.
-                                        </p>
-                                        <p>
-                                            Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
-                                            listening and understanding of any situation.
-                                        </p>
+                                    <div id="collapseSymbolFive" class="collapse" aria-labelledby="headingOne" data-parent="#storyAccordion">
+                                        <div class="card-body position-relative z-index-1">
+                                            <p>
+                                                His senses also embody valuable messages that one shall carry throughout his journey at Djinn Guild.
+                                            </p>
+                                            <p>
+                                                The eyes without pupils represent impartiality so that members will always look for the truth, to stay
+                                                factual and unbiased no matter wealth, power, or status. Thus, under no circumstances will anyone come
+                                                across as having blind eyes.
+                                            </p>
+                                            <p>
+                                                Then, the golden earrings are an embodiment of becoming all ears, showing the importance of thorough
+                                                listening and understanding of any situation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -295,57 +331,53 @@
                 </div>
             </section>
             <section id="vision" class="text-center section">
-                <div class="moon-avatar float-icon"></div>
-                <div class="star-avatar-2 float-icon"></div>
-                <h2 class="heading-1">vision & missions</h2>
+                <div class="moon-avatar float-icon" data-scroll-speed="2"></div>
+                <div class="star-avatar-2 float-icon" data-scroll-speed="2"></div>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-2" class="smoke-effect"></div>
+                    Vision & missions
+                </h2>
                 <div class="vision-items">
                     <div class="item-1 item">
                         <div class="text-item">Organic<br />Community</div>
-                        <div class="active-item">
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
                             <div class="title">Organic<br />Community</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
                         </div>
                     </div>
                     <div class="item-2 item">
                         <div class="text-item">gaming<br />library</div>
                         <div class="active-item active">
-                            <div class="title">gaming<br />library</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">gaming<br />library</div>
                         </div>
                     </div>
                     <div class="item-3 item">
                         <div class="text-item">strategic<br />play2win<br />methods</div>
                         <div class="active-item">
-                            <div class="title">strategic<br />play2win<br />methods</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">strategic<br />play2win<br />methods</div>
                         </div>
                     </div>
                     <div class="item-4 item">
                         <div class="text-item">redefining<br />scholarship<br />program</div>
                         <div class="active-item">
-                            <div class="title">redefining<br />scholarship<br />program</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">redefining<br />scholarship<br />program</div>
                         </div>
                     </div>
                     <div class="item-5 item">
                         <div class="text-item">csr<br />activities</div>
                         <div class="active-item">
-                            <div class="title">csr<br />activities</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">csr<br />activities</div>
                         </div>
                     </div>
                     <div class="item-6 item">
                         <div class="text-item">gaming<br />environment<br />maintenance</div>
                         <div class="active-item">
-                            <div class="title">gaming<br />environment<br />maintenance</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">gaming<br />environment<br />maintenance</div>
                         </div>
                     </div>
                     <div class="item-7 item">
                         <div class="text-item">mental<br />& physical<br />healthcare</div>
                         <div class="active-item">
-                            <div class="title">mental<br />& physical<br />healthcare</div>
-                            <div><i class="fa fa-plus-circle" data-toggle="modal" data-target="#visionDetailModal"></i></div>
+                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">mental<br />& physical<br />healthcare</div>
                         </div>
                     </div>
                 </div>
@@ -361,7 +393,10 @@
                         <div class="modal-content">
                             <div class="modal-inner">
                                 <div class="modal-body">
-                                    <h3>Build a <br> gaming library</h3>
+                                    <h3>
+                                        Build a <br />
+                                        gaming library
+                                    </h3>
                                     <div class="desc">
                                         <p>
                                             Provide detailed analysis as well as draw on the collective strength of more than 50 Esports athletes from
@@ -382,10 +417,13 @@
                 </div>
             </section>
             <section id="team" class="text-center teams section">
-                <div class="star-avatar-3 float-icon"></div>
-                <div class="star-avatar-4 float-icon"></div>
-                <div class="moon-avatar-2 float-icon"></div>
-                <h2 class="heading-1">the team</h2>
+                <div class="star-avatar-3 float-icon" data-scroll-speed="2"></div>
+                <div class="star-avatar-4 float-icon" data-scroll-speed="2"></div>
+                <div class="moon-avatar-2 float-icon" data-scroll-speed="2"></div>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-3" class="smoke-effect"></div>
+                    the team
+                </h2>
                 <div class="team-items mt-100 container">
                     <div class="item active">
                         <img src="assets/images/team-01.png" alt="team-01" />
@@ -455,7 +493,10 @@
                 </div>
             </section>
             <section id="advisor" class="text-center advisor section">
-                <h2 class="heading-1">board of advisor</h2>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-4" class="smoke-effect"></div>
+                    board of advisor
+                </h2>
                 <div class="advisor-items mt-100 container">
                     <div class="item">
                         <img src="assets/images/advisor-01.png" alt="advisor-01" />
@@ -505,7 +546,10 @@
                 </div>
             </section>
             <section id="partner" class="text-center partner section">
-                <h2 class="heading-1">backers & partners</h2>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-5" class="smoke-effect"></div>
+                    backers & partners
+                </h2>
                 <div class="container mt-100">
                     <div class="row">
                         <div class="col-sm-6">
@@ -524,51 +568,249 @@
                 </div>
             </section>
             <section id="alliance" class="text-center alliance section">
-                <h2 class="heading-1">the alliance</h2>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-6" class="smoke-effect"></div>
+                    the alliance
+                </h2>
                 <div class="dgg-container">
-                    <div class="list-alliance mt-100">
-                        <div class="item-alliance">
-                            <div class="alliance-content">
-                                <img src="assets/images/circle.png" alt="circle" />
-                                <div class="text">
-                                    secret<br />
-                                    partner
+                    <nav>
+                        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                            <a
+                                class="nav-link active"
+                                id="asia-tab"
+                                data-toggle="tab"
+                                href="#asia"
+                                role="tab"
+                                aria-controls="asia"
+                                aria-selected="true"
+                                >Asia Alliance</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="american-tab"
+                                data-toggle="tab"
+                                href="#american"
+                                role="tab"
+                                aria-controls="american"
+                                aria-selected="false"
+                                >American Alliance</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="europe-tab"
+                                data-toggle="tab"
+                                href="#europe"
+                                role="tab"
+                                aria-controls="europe"
+                                aria-selected="false"
+                                >Europe Alliance</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="wourldwide-tab"
+                                data-toggle="tab"
+                                href="#wourldwide"
+                                role="tab"
+                                aria-controls="wourldwide"
+                                aria-selected="false"
+                                >Wourldwide Alliance</a
+                            >
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="asia" role="tabpanel" aria-labelledby="asia-tab">
+                            <div class="list-alliance">
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item-alliance">
-                            <div class="alliance-content">
-                                <img src="assets/images/circle.png" alt="circle" />
-                                <div class="text">
-                                    secret<br />
-                                    partner
+                        <div class="tab-pane fade" id="american" role="tabpanel" aria-labelledby="american-tab">
+                            <div class="list-alliance">
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item-alliance">
-                            <div class="alliance-content">
-                                <img src="assets/images/circle.png" alt="circle" />
-                                <div class="text">
-                                    secret<br />
-                                    partner
+                        <div class="tab-pane fade" id="europe" role="tabpanel" aria-labelledby="europe-tab">
+                            <div class="list-alliance">
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item-alliance">
-                            <div class="alliance-content">
-                                <img src="assets/images/circle.png" alt="circle" />
-                                <div class="text">
-                                    secret<br />
-                                    partner
+                        <div class="tab-pane fade" id="wourldwide" role="tabpanel" aria-labelledby="wourldwide-tab">
+                            <div class="list-alliance">
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="item-alliance">
-                            <div class="alliance-content">
-                                <img src="assets/images/circle.png" alt="circle" />
-                                <div class="text">
-                                    secret<br />
-                                    partner
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-alliance">
+                                    <div class="alliance-content">
+                                        <img src="assets/images/circle.png" alt="circle" />
+                                        <div class="text">
+                                            secret<br />
+                                            partner
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -576,7 +818,10 @@
                 </div>
             </section>
             <section id="roadmap" class="text-center roadmap section">
-                <h2 class="heading-1">roadmap</h2>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-7" class="smoke-effect"></div>
+                    roadmap
+                </h2>
                 <div class="dgg-container">
                     <div class="accordion" id="accordionExample">
                         <div class="card-wrapper">
@@ -753,7 +998,10 @@
                 </div>
             </section>
             <section id="contact-us" class="section">
-                <h2 class="heading-1">connect with us</h2>
+                <h2 class="heading-1">
+                    <div id="smoke-effect-8" class="smoke-effect"></div>
+                    connect with us
+                </h2>
                 <div class="dgg-container">
                     <div class="item-list d-flex justify-content-around justify-lg-content-between">
                         <div class="item-wrapper">
@@ -813,6 +1061,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
         <script src="assets/js/jquery.lazy.min.js" defer></script>
+        <script src="assets/js/spine-player.min.js" defer></script>
         <script src="assets/js/app.js?v=01052022" defer></script>
     </body>
 </html>
