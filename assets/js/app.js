@@ -21,7 +21,7 @@ jQuery.event.special.mousewheel = {
 
 $(document).ready(function () {
     // $(window).load(function() {
-        $("html, body").animate({ scrollTop: 0 }, "fast");
+    $("html, body").animate({ scrollTop: 0 }, "fast");
     // })
     $(".vision-items .text-item").mouseover(function () {
         $(".vision-items .active-item").removeClass("active");
@@ -50,16 +50,6 @@ $(document).ready(function () {
         }
     });
 
-    for (var i = 1; i <= 8; i++) {
-        new spine.SpinePlayer(`smoke-effect-${i}`, {
-            jsonUrl: "assets/js/spine/smoke-web.json",
-            atlasUrl: "assets/js/spine/smoke-web.atlas",
-            alpha: true,
-            backgroundColor: "#00000000",
-            animation: "animation",
-            showControls: false,
-        });
-    }
     $.fn.moveIt = function () {
         var $window = $(window);
         var instances = [];
@@ -96,7 +86,7 @@ $(document).ready(function () {
         var w = $(window).width();
         var bgs = 110;
         if (w <= 768) {
-            bgs= 245
+            bgs = 245;
         }
         $("#space-bg .bg").css("opacity", 1 - $(this).scrollTop() / 700);
         $(".stars-outer").css("opacity", 1 - $(this).scrollTop() / 800);
@@ -109,7 +99,7 @@ $(document).ready(function () {
             $(".scroll-text").addClass("hide");
         }
         if ($(this).scrollTop() > h) {
-            $('#space-bg').remove();    
+            $("#space-bg").remove();
         }
     });
 
@@ -142,4 +132,23 @@ $(document).ready(function () {
     }
 
     init();
+
+    $(window).on("load", function () {
+        let isLoaded = false;
+        $(window).scroll(function (event) {
+            if (!isLoaded) {
+                isLoaded = true;
+                for (var i = 1; i <= 8; i++) {
+                    new spine.SpinePlayer(`smoke-effect-${i}`, {
+                        jsonUrl: "assets/js/spine/smoke-web.json",
+                        atlasUrl: "assets/js/spine/smoke-web.atlas",
+                        alpha: true,
+                        backgroundColor: "#00000000",
+                        animation: "animation",
+                        showControls: false,
+                    });
+                }
+            }
+        });
+    });
 });
