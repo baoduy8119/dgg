@@ -81,7 +81,12 @@ $(document).ready(function () {
 
     $("[data-scroll-speed]").moveIt();
 
+    var isHeroLoaded = false;
     $("#space-bg").scroll(function (e) {
+        if (!isHeroLoaded) {
+            isHeroLoaded = true;
+            init();
+        }
         var h = $(window).height();
         var w = $(window).width();
         var bgs = 110;
@@ -94,12 +99,10 @@ $(document).ready(function () {
         if (1 - $(this).scrollTop() / 700 < 0) {
             $("header").addClass("show");
             $(".hero-container").addClass("show");
+            $("#space-bg").remove();
         }
         if ($(this).scrollTop() > 100) {
             $(".scroll-text").addClass("hide");
-        }
-        if ($(this).scrollTop() > h) {
-            $("#space-bg").remove();
         }
     });
 
@@ -131,8 +134,7 @@ $(document).ready(function () {
         }
     }
 
-    init();
-
+    
     $(window).on("load", function () {
         let isLoaded = false;
         $(window).scroll(function (event) {
