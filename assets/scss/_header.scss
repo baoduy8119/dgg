@@ -131,6 +131,12 @@ header {
                 margin: 25px 10px;
             }
         }
+        @media screen and (max-width: 768px) {
+            .dgg-btn {
+                margin-right: 40px;
+            }
+        }
+        
     }
     .toggle-menu {
         font-size: 30px;
