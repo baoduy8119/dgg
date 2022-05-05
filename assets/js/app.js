@@ -2,9 +2,9 @@ $(document).ready(function () {
     // $(window).load(function() {
     $("html, body").animate({ scrollTop: 0 }, "fast");
     // })
-    $(".vision-items .text-item").mouseover(function () {
+    $(".vision-items .item").mouseover(function () {
         $(".vision-items .active-item").removeClass("active");
-        $(this).next().addClass("active");
+        $(this).find(".active-item").addClass("active");
     });
     $(".toggle-menu").on("click", function (e) {
         e.preventDefault();
@@ -59,87 +59,12 @@ $(document).ready(function () {
     };
 
     $("[data-scroll-speed]").moveIt();
-    $(document).on("scroll", "#space-bg", function () {
-        console.log(1111);
-    });
 
-    $("#space-bg").on("scroll", function () {
-        console.log(2222);
-    });
-
-    console.log($("#space-bg").scrollTop());
-
-    document.addEventListener(
-        "scroll",
-        function (event) {
-            if (event.target.id === "space-bg") {
-                // or any other filtering condition
-                console.log("scrolling", event.target);
-            }
-        },
-        true /*Capture event*/
-    );
-
-    var h = $(window).height();
-    var w = $(window).width();
-    var bgs = 100;
-    if (w <= 768) {
-        bgs = 345;
-    }
-    if (w / h < 1.77 && w >= 768) {
-        bgs = 200;
-    }
-    $("#space-bg").css("background-size", `${bgs}%`);
-    $("#space-bg").scroll(function (e) {
-        $("#space-bg").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
-        $(".stars-outer").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
-        $("#space-bg").css("background-size", `${bgs + $("#space-bg").scrollTop() / 50}%`);
-        console.log("scrollTop", $("#space-bg").scrollTop());
-        console.log(1 - $("#space-bg").scrollTop() / 10000);
-        if (1 - $("#space-bg").scrollTop() / 10000 < 0.4) {
-            $(".hero-container").addClass("show");
-        }
-        if (1 - $("#space-bg").scrollTop() / 10000 < 0.25) {
+    $(window).scroll(function (event) {
+        if ($(window).scrollTop() > 100) {
             $("header").addClass("show");
-            $("body").removeClass("banner-active");
-        }
-        if (1 - $("#space-bg").scrollTop() / 10000 < 0.1) {
-            $("#space-bg").remove();
-        }
-        if ($("#space-bg").scrollTop() > 100) {
-            $(".scroll-text").addClass("hide");
         }
     });
-
-    function getCenter(sky) {
-        const w = sky.clientWidth;
-        const h = sky.clientHeight;
-        return {
-            x: parseInt(w / 2),
-            y: parseInt(h / 2),
-        };
-    }
-
-    function getDot(x, y, group) {
-        const size = Math.round(Math.random() + 2);
-        const dot = document.createElement("span");
-        dot.classList.add("stars-star", `stars-axis-${group}`, `stars-size-${size}`);
-        dot.style.top = `${y}px`;
-        dot.style.left = `${x}px`;
-        return dot.cloneNode();
-    }
-
-    function init() {
-        const sky = document.querySelector("#stars-sky");
-        sky.innerHTML = "";
-        for (let i = 1; i < 360; i++) {
-            const { x, y } = getCenter(sky);
-            const dot = getDot(x, y, i);
-            sky.appendChild(dot);
-        }
-    }
-
-    init();
 
     $(window).on("load", function () {
         let isLoaded = false;
@@ -193,4 +118,45 @@ $(document).ready(function () {
             createStar();
         }
     });
+
+    const app = document.getElementById("text-effect");
+
+    const myRand = () => {
+        let r = 50;
+        while (40 < r && r < 60) {
+            r = Math.random() * 100;
+        }
+        return r;
+    };
+
+    const myColorRand = () => {
+        let r = ["ff0000", "ff9a00", "d0de21", "4fdc4a", "3fdad8", "2fc9e2", "5f15f2", "ba0cf8", "fb07d9", "ff0000"];
+        let color = Math.floor(Math.random() * r.length);
+        console.log(color);
+        return r[color];
+    };
+
+    const hex2rgba = (hex, alpha = 1) => {
+        const [r, g, b] = hex.match(/\w\w/g).map((x) => parseInt(x, 16));
+        return `rgba(${r},${g},${b},${alpha})`;
+    };
+
+    for (let i = 0; i < 100; i++) {
+        const delay = Math.random() + "s";
+        const el = document.createElement("span");
+        const c = hex2rgba(myColorRand(), 0.8);
+        const size = Math.floor(Math.random() * 6) + 2;
+        el.className = "glitter-star";
+        el.style.top = myRand() + "%";
+        el.style.left = myRand() + "%";
+        el.style.backgroundColor = c;
+        el.style.boxShadow = "0 0 6px " + c;
+        el.style.width = size + "px"
+        el.style.height = size + "px"
+        el.style.animationDelay = delay;
+        el.style.msAnimationDelay = delay;
+        el.style.webkitAnimationDelay = delay;
+        el.style.monAnimationDelay = delay;
+        app.appendChild(el);
+    }
 });

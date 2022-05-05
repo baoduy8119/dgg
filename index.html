@@ -25,25 +25,9 @@
         <link rel="stylesheet" href="assets/css/styles.min.css?v=08052022" />
     </head>
 
-    <body class="banner-active">
+    <body>
         <div id="starshine">
             <div class="template shine"></div>
-        </div>
-        <div id="space-bg">
-            <div class="stars-outer">
-                <div id="stars-sky"></div>
-            </div>
-            <div class="scroll-text">
-                <div class="inner">
-                    <div class="mouse"></div>
-                    <div class="text">
-                        Scroll Down To Continue
-                    </div>
-                </div>
-            </div>
-            <div class="bg-wrapper">
-                <div class="scroll"></div>
-            </div>
         </div>
         <header class="header d-flex align-items-center">
             <a href="/" class="logo d-flex align-items-center text-decoration-none">
@@ -88,9 +72,12 @@
                         <h1 class="title text-center">
                             “open your mind<br />
                             and you will see
-                            <div>
-                                the collateral<br />
-                                universe
+                            <div class="position-relative">
+                                <div class="text">
+                                    the collateral<br />
+                                    universe
+                                </div>
+                                <div id="text-effect"></div>
                             </div>
                             we’re building”
                         </h1>
@@ -347,38 +334,38 @@
                     </div>
                     <div class="item-2 item">
                         <div class="text-item">gaming<br />library</div>
-                        <div class="active-item active">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">gaming<br />library</div>
+                        <div class="active-item active" data-toggle="modal" data-target="#gameLibraryModal">
+                            <div class="title">gaming<br />library</div>
                         </div>
                     </div>
                     <div class="item-3 item">
                         <div class="text-item">strategic<br />play2win<br />methods</div>
-                        <div class="active-item">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">strategic<br />play2win<br />methods</div>
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
+                            <div class="title">strategic<br />play2win<br />methods</div>
                         </div>
                     </div>
                     <div class="item-4 item">
                         <div class="text-item">redefining<br />scholarship<br />program</div>
-                        <div class="active-item">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">redefining<br />scholarship<br />program</div>
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
+                            <div class="title">redefining<br />scholarship<br />program</div>
                         </div>
                     </div>
                     <div class="item-5 item">
                         <div class="text-item">csr<br />activities</div>
-                        <div class="active-item">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">csr<br />activities</div>
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
+                            <div class="title">csr<br />activities</div>
                         </div>
                     </div>
                     <div class="item-6 item">
                         <div class="text-item">gaming<br />environment<br />maintenance</div>
-                        <div class="active-item">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">gaming<br />environment<br />maintenance</div>
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
+                            <div class="title">gaming<br />environment<br />maintenance</div>
                         </div>
                     </div>
                     <div class="item-7 item">
                         <div class="text-item">mental<br />& physical<br />healthcare</div>
-                        <div class="active-item">
-                            <div class="title" data-toggle="modal" data-target="#visionDetailModal">mental<br />& physical<br />healthcare</div>
+                        <div class="active-item" data-toggle="modal" data-target="#visionDetailModal">
+                            <div class="title">mental<br />& physical<br />healthcare</div>
                         </div>
                     </div>
                 </div>
@@ -388,6 +375,40 @@
                     tabindex="-1"
                     role="dialog"
                     aria-labelledby="visionDetailModalTitle"
+                    aria-hidden="true"
+                >
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-inner">
+                                <div class="modal-body">
+                                    <h3>
+                                        Build a <br />
+                                        Organic Community
+                                    </h3>
+                                    <div class="desc">
+                                        <p>
+                                            Provide detailed analysis as well as draw on the collective strength of more than 50 Esports athletes from
+                                            Djinn Guild’s with different game genres and platforms; for finding the way to success in the fastest and
+                                            most specific manner with an appropriate and economical investment approach from time to time.
+                                        </p>
+                                        <p>
+                                            Provide detailed analysis as well as draw on the collective strength of more than 50 Esports athletes from
+                                            Djinn Guild’s with different game genres and platforms; for finding the way to success in the fastest and
+                                            most specific manner with an appropriate and economical investment approach from time to time.
+                                        </p>
+                                    </div>
+                                    <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="modal fade"
+                    id="gameLibraryModal"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="gameLibraryModalTitle"
                     aria-hidden="true"
                 >
                     <div class="modal-dialog modal-dialog-centered" role="document">

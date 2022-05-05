@@ -76,7 +76,7 @@ body {
     text-transform: uppercase;
     text-align: center;
 
-    background: linear-gradient(to left, #ffdf8d 0% #ff9300 20%, #ffdf8d 40%, #ffae38 70%, #ffdf8d 100%);
+    background: linear-gradient(to left, #d5cf99 0% #ff9300 20%, #d5cf99 40%, #ffae38 70%, #ffdf8d 100%);
     background-size: 200% auto;
 
     color: #000;
@@ -380,6 +380,12 @@ a {
     transform: translateX(-50%);
     width: 860px;
     height: 430px;
+    @media screen and (max-width: 767px) {
+        top: -130px;
+        width: 600px;
+        height: 300px;
+    }
+    
 }
 .nav-tabs {
     border: none;

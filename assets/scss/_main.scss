@@ -4,17 +4,25 @@
     video {
         width: 100%;
     }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 200px;
+        background: rgb(8, 14, 23);
+        background: linear-gradient(0deg, rgba(8, 14, 23, 1) 20%, rgba(255, 255, 255, 0) 100%);
+        @media screen and (max-width: 767px) {
+            height: 50px;
+        }
+    }
     .hero-container {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        opacity: 0;
-        transition: all 0.3s;
-        &.show {
-            opacity: 1;
-        }
         .dgg-container {
             display: flex;
             align-items: center;
@@ -39,12 +47,14 @@
             font-size: 16px;
             line-height: 22px;
         }
-        div {
-            background: #ff9300;
-            background: linear-gradient(to right, #ff9300 0%, #ffdf8d 50%, #ff9300 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0px 0px 5px rgba(255, 147, 0, 0.8);
+        .text {
+            position: relative;
+            z-index: 2;
+            color: #ff9300;
+            // background: linear-gradient(to right, #ff9300 0%, #d5cf99 50%, #ff9300 100%);
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 2px #d07c06, 0 0 10px #eb8a02, 0 0 10px #eb8a02, 0 0 10px #eb8a02, 0 0 10px #eb8a02;
         }
     }
     .dgg-btn {
@@ -244,6 +254,19 @@
     position: relative;
     background: url(../images/vision-bg.png) no-repeat bottom center;
     background-size: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100px;
+        background: rgb(8, 14, 23);
+        background: linear-gradient(0deg, rgba(8, 14, 23, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        @media screen and (max-width: 767px) {
+            height: 50px;
+        }
+    }
     .moon-avatar {
         top: -50px;
         left: 50px;
@@ -277,6 +300,18 @@
             width: 339px;
             height: 292px;
             cursor: pointer;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            .active-item {
+                transition: all 0.2s;
+            }
+            .active-item {
+                &.active {
+                    opacity: 1;
+                    .title {
+                        text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
+                    }
+                }
+            }
             .text-item {
                 padding: 20px 20px;
                 transition: all 0.2s;
@@ -501,7 +536,7 @@
             @media screen and (max-width: 992px) {
                 margin: 20px 0;
             }
-    
+
             .alliance-content {
                 display: inline-block;
                 position: relative;
@@ -648,7 +683,7 @@ main {
     max-width: 860px;
     margin: 0 auto;
     @media screen and (max-width: 1024px) {
-        width: 700px
+        width: 700px;
     }
     @media screen and (max-width: 767px) {
         max-width: 360px;
@@ -707,7 +742,7 @@ main {
             width: 694px;
             height: 600px;
         }
-        
+
         @media screen and (max-width: 767px) {
             width: 369px;
             height: 354px;
@@ -776,7 +811,7 @@ main {
     overflow-y: auto;
     background: url(../images/space-bg.png) no-repeat center center;
     background-size: 100%;
-    
+
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -803,7 +838,6 @@ main {
     // @media screen and (max-width: 768px) {
     //     background-size: 245%;
     // }
-    
 }
 .scroll {
     position: absolute;
@@ -812,7 +846,7 @@ main {
     right: 0;
     height: 100vh;
     background: transparent;
-    z-index: 2
+    z-index: 2;
 }
 .scroll-text {
     position: fixed;
@@ -829,7 +863,7 @@ main {
     @media screen and (max-width: 767px) {
         font-size: 20px;
     }
-    
+
     .inner {
         position: absolute;
         bottom: 200px;
@@ -852,5 +886,59 @@ main {
     left: 0;
     right: 0;
     height: 100vh;
-    background: transparent
+    background: transparent;
+}
+
+#text-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .text {
+        position: relative;
+        z-index: 1;
+    }
+}
+.character {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.glitter-star {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: glitter 2s linear 0s infinite normal;
+    z-index: -1;
+}
+
+@keyframes glitter {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        -webkit-transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        -webkit-transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
 }
