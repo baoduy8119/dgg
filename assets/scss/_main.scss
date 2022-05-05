@@ -822,10 +822,14 @@ main {
     bottom: 0;
     // transform: translateX(-50%);
     background: transparent;
-    z-index: 2;
+    z-index: -1;
     color: white;
     font-size: 40px;
     transition: all 0.3s;
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+    }
+    
     .inner {
         position: absolute;
         bottom: 200px;

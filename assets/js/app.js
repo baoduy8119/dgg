@@ -59,21 +59,26 @@ $(document).ready(function () {
     };
 
     $("[data-scroll-speed]").moveIt();
-    $(document).on('scroll', '#space-bg', function(){
+    $(document).on("scroll", "#space-bg", function () {
         console.log(1111);
-    })
+    });
 
-    $("#space-bg").on( 'scroll', function(){
+    $("#space-bg").on("scroll", function () {
         console.log(2222);
     });
 
     console.log($("#space-bg").scrollTop());
 
-    document.addEventListener('scroll', function (event) {
-        if (event.target.id === 'space-bg') { // or any other filtering condition        
-            console.log('scrolling', event.target);
-        }
-    }, true /*Capture event*/);
+    document.addEventListener(
+        "scroll",
+        function (event) {
+            if (event.target.id === "space-bg") {
+                // or any other filtering condition
+                console.log("scrolling", event.target);
+            }
+        },
+        true /*Capture event*/
+    );
 
     var h = $(window).height();
     var w = $(window).width();
@@ -81,7 +86,7 @@ $(document).ready(function () {
     if (w <= 768) {
         bgs = 345;
     }
-    if (w/h < 1.77 && w >= 768) {
+    if (w / h < 1.77 && w >= 768) {
         bgs = 200;
     }
     $("#space-bg").css("background-size", `${bgs}%`);
@@ -89,14 +94,14 @@ $(document).ready(function () {
         $("#space-bg").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
         $(".stars-outer").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
         $("#space-bg").css("background-size", `${bgs + $("#space-bg").scrollTop() / 50}%`);
-        console.log('scrollTop',$("#space-bg").scrollTop());
+        console.log("scrollTop", $("#space-bg").scrollTop());
         console.log(1 - $("#space-bg").scrollTop() / 10000);
         if (1 - $("#space-bg").scrollTop() / 10000 < 0.4) {
             $(".hero-container").addClass("show");
         }
         if (1 - $("#space-bg").scrollTop() / 10000 < 0.25) {
             $("header").addClass("show");
-            $("body").removeClass('banner-active');
+            $("body").removeClass("banner-active");
         }
         if (1 - $("#space-bg").scrollTop() / 10000 < 0.1) {
             $("#space-bg").remove();
@@ -135,7 +140,7 @@ $(document).ready(function () {
     }
 
     init();
-    
+
     $(window).on("load", function () {
         let isLoaded = false;
         $(window).scroll(function (event) {
@@ -155,5 +160,37 @@ $(document).ready(function () {
         });
     });
 
-    
+    $(function () {
+        var body = $("#starshine"),
+            template = $(".template.shine"),
+            stars = 150,
+            sparkle = 20;
+
+        var size = "small";
+        var createStar = function () {
+            template
+                .clone()
+                .removeAttr("id")
+                .css({
+                    top: Math.random() * 100 + "%",
+                    left: Math.random() * 100 + "%",
+                    webkitAnimationDelay: Math.random() * sparkle + "s",
+                    mozAnimationDelay: Math.random() * sparkle + "s",
+                })
+                .addClass(size)
+                .appendTo(body);
+        };
+
+        for (var i = 0; i < stars; i++) {
+            if (i % 2 === 0) {
+                size = "small";
+            } else if (i % 3 === 0) {
+                size = "medium";
+            } else {
+                size = "large";
+            }
+
+            createStar();
+        }
+    });
 });
