@@ -13,10 +13,12 @@ header {
     &.show {
         transform: translateY(0);
     }
-    
     @media screen and (max-width: 1024px) {
         padding: 8px 25px;
         justify-content: space-between;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 2px 15px;
     }
     .logo {
         img {
@@ -24,6 +26,10 @@ header {
             @media screen and (max-width: 991px) {
                 width: 90px;
             }
+            @media screen and (max-width: 767px) {
+                width: 75px;
+            }
+            
         }
     }
     .nav {

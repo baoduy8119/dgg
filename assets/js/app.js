@@ -75,17 +75,17 @@ $(document).ready(function () {
         }
     }, true /*Capture event*/);
 
+    var h = $(window).height();
+    var w = $(window).width();
+    var bgs = 100;
+    if (w <= 768) {
+        bgs = 345;
+    }
+    if (w/h < 1.77 && w >= 768) {
+        bgs = 200;
+    }
+    $("#space-bg").css("background-size", `${bgs}%`);
     $("#space-bg").scroll(function (e) {
-        console.log(e);
-        var h = $(window).height();
-        var w = $(window).width();
-        var bgs = 100;
-        if (w <= 768) {
-            bgs = 245;
-        }
-        if (w/h < 1.77) {
-            bgs = 200;
-        }
         $("#space-bg").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
         $(".stars-outer").css("opacity", 1 - $("#space-bg").scrollTop() / 10000);
         $("#space-bg").css("background-size", `${bgs + $("#space-bg").scrollTop() / 50}%`);
@@ -105,10 +105,6 @@ $(document).ready(function () {
             $(".scroll-text").addClass("hide");
         }
     });
-
-   if($(window).width()/$(window).height()<1.77) {
-    $("#space-bg").css("background-size", "200%");
-   }
 
     function getCenter(sky) {
         const w = sky.clientWidth;

@@ -7,7 +7,7 @@ body {
         overflow: hidden;
     }
     @media screen and (max-width: 767px) {
-        background-size: 400%;
+        // background-size: 400%;
     }
 }
 .dgg-btn {
@@ -132,6 +132,7 @@ body {
     padding: 100px 0;
     @media screen and (max-width: 767px) {
         padding: 50px 0;
+        overflow: hidden;
     }
 }
 .hexagon {

@@ -36,8 +36,8 @@
             line-height: 40px;
         }
         @media screen and (max-width: 767px) {
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 16px;
+            line-height: 22px;
         }
         div {
             background: #ff9300;
@@ -55,6 +55,7 @@
 .float-icon {
     position: absolute;
     opacity: 0.5;
+    z-index: 10;
     @media screen and (max-width: 1024px) {
         display: none;
     }
@@ -106,6 +107,11 @@
     background: url(../images/beautiful-shining-stars-night-sky.png) no-repeat;
     background-position: center top;
     background-size: 100%;
+    .accordion {
+        @media screen and (max-width: 767px) {
+            margin-top: 40px;
+        }
+    }
     .sun-avatar {
         left: 50px;
         top: 480px;
