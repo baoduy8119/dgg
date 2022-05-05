@@ -68,24 +68,28 @@ body {
     margin: 0;
     font-size: 60px;
     letter-spacing: 5px;
-    background: #ff9300;
-    // background: linear-gradient(to right, #ff9300 0%, #ffdf8d 60%, #ffae38 100%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // text-shadow: none;
     text-transform: uppercase;
     text-align: center;
-
-    background: linear-gradient(to left, #d5cf99 0% #ff9300 20%, #d5cf99 40%, #ffae38 70%, #ffdf8d 100%);
-    background-size: 200% auto;
-
-    color: #000;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: shine 4s linear infinite;
+    span{
+        background: #FF9300;
+        background: -webkit-linear-gradient(315deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: -o-linear-gradient(315deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: linear-gradient(135deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: -webkit-gradient(left bottom, right top, color-stop(20%, #ffeec4), color-stop(40%, #FF9300), color-stop(60%, #FFAE38), color-stop(80%, #ffeec4));
+        background: -webkit-linear-gradient(135deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: -moz-linear-gradient(135deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: -ms-linear-gradient(135deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background: -o-linear-gradient(135deg, #ffeec4 20%, #FF9300 40%, #FFAE38 60%, #ffeec4 80%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        z-index: 1;
+        text-shadow: 1px 1px 15px rgba(255, 102 ,0 ,0.55), 1px 1px 15px rgba(255, 102, 0 ,0.6);
+        -webkit-animation: shine 7s ease infinite;
+        animation: shine 7s ease infinite;
+    }
     @keyframes shine {
         to {
             background-position: 200% center;

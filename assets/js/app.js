@@ -119,44 +119,75 @@ $(document).ready(function () {
         }
     });
 
-    const app = document.getElementById("text-effect");
+    // const app = document.getElementById("text-effect");
 
-    const myRand = () => {
-        let r = 50;
-        while (40 < r && r < 60) {
-            r = Math.random() * 100;
-        }
-        return r;
+    // const myRand = () => {
+    //     let r = 50;
+    //     while (40 < r && r < 60) {
+    //         r = Math.random() * 100;
+    //     }
+    //     return r;
+    // };
+
+    // const myColorRand = () => {
+    //     let r = ["ff0000", "ff9a00", "d0de21", "4fdc4a", "3fdad8", "2fc9e2", "5f15f2", "ba0cf8", "fb07d9", "ff0000"];
+    //     let color = Math.floor(Math.random() * r.length);
+    //     console.log(color);
+    //     return r[color];
+    // };
+
+    // const hex2rgba = (hex, alpha = 1) => {
+    //     const [r, g, b] = hex.match(/\w\w/g).map((x) => parseInt(x, 16));
+    //     return `rgba(${r},${g},${b},${alpha})`;
+    // };
+
+    // for (let i = 0; i < 100; i++) {
+    //     const delay = Math.random() + "s";
+    //     const el = document.createElement("span");
+    //     const c = hex2rgba(myColorRand(), 0.8);
+    //     const size = Math.floor(Math.random() * 6) + 2;
+    //     el.className = "glitter-star";
+    //     el.style.top = myRand() + "%";
+    //     el.style.left = myRand() + "%";
+    //     el.style.backgroundColor = c;
+    //     el.style.boxShadow = "0 0 6px " + c;
+    //     el.style.width = size + "px"
+    //     el.style.height = size + "px"
+    //     el.style.animationDelay = delay;
+    //     el.style.msAnimationDelay = delay;
+    //     el.style.webkitAnimationDelay = delay;
+    //     el.style.monAnimationDelay = delay;
+    //     app.appendChild(el);
+    // }
+    window.onload = function () {
+        var $main = document.querySelector("#text-effect");
+        console.log($main);
+        let sparticles,
+            options = {
+                composition: "source-over",
+                count: 250,
+                speed: 0,
+                parallax: 0,
+                direction: 0,
+                xVariance: 0.2,
+                yVariance: 0.2,
+                rotate: false,
+                rotation: 0,
+                alphaSpeed: 4.2,
+                alphaVariance: 6,
+                minAlpha: -0.4,
+                maxAlpha: 1.4,
+                minSize: 2,
+                maxSize: 10,
+                style: "fill",
+                bounce: false,
+                drift: 0,
+                glow: 0,
+                twinkle: true,
+                color: ["#ffccfe", "#b5eefb", "#95c5f4", "#c2b0e3", "#dff1ff", "#fff"],
+                shape: ["star", "diamond"],
+                imageUrl: "",
+            };
+        window.mySparticles = new Sparticles($main, options);
     };
-
-    const myColorRand = () => {
-        let r = ["ff0000", "ff9a00", "d0de21", "4fdc4a", "3fdad8", "2fc9e2", "5f15f2", "ba0cf8", "fb07d9", "ff0000"];
-        let color = Math.floor(Math.random() * r.length);
-        console.log(color);
-        return r[color];
-    };
-
-    const hex2rgba = (hex, alpha = 1) => {
-        const [r, g, b] = hex.match(/\w\w/g).map((x) => parseInt(x, 16));
-        return `rgba(${r},${g},${b},${alpha})`;
-    };
-
-    for (let i = 0; i < 100; i++) {
-        const delay = Math.random() + "s";
-        const el = document.createElement("span");
-        const c = hex2rgba(myColorRand(), 0.8);
-        const size = Math.floor(Math.random() * 6) + 2;
-        el.className = "glitter-star";
-        el.style.top = myRand() + "%";
-        el.style.left = myRand() + "%";
-        el.style.backgroundColor = c;
-        el.style.boxShadow = "0 0 6px " + c;
-        el.style.width = size + "px"
-        el.style.height = size + "px"
-        el.style.animationDelay = delay;
-        el.style.msAnimationDelay = delay;
-        el.style.webkitAnimationDelay = delay;
-        el.style.monAnimationDelay = delay;
-        app.appendChild(el);
-    }
 });
