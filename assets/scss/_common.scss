@@ -134,7 +134,7 @@ body {
 }
 .section {
     padding: 100px 0;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
         padding: 50px 0;
         overflow: hidden;
     }
@@ -425,8 +425,16 @@ a {
                 width: 127px;
                 height: 35px;
                 background: url(../images/nav-tabs-effect-bottom.png);
+                @media screen and (max-width: 768px) {
+                    bottom: -25px;
+                }
+                
             }
         }
+        @media screen and (max-width: 768px) {
+            margin: 10px 0;
+        }
+        
     }
 }
 $pi: 3.14159265359;
