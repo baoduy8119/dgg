@@ -159,35 +159,34 @@ $(document).ready(function () {
     //     el.style.monAnimationDelay = delay;
     //     app.appendChild(el);
     // }
+    let maxSize = (/Mobi|Android/i.test(navigator.userAgent)) ? 4 : 10;
     window.onload = function () {
         var $main = document.querySelector("#text-effect");
-        console.log($main);
-        let sparticles,
-            options = {
-                composition: "source-over",
-                count: 250,
-                speed: 0,
-                parallax: 0,
-                direction: 0,
-                xVariance: 0.2,
-                yVariance: 0.2,
-                rotate: false,
-                rotation: 0,
-                alphaSpeed: 4.2,
-                alphaVariance: 6,
-                minAlpha: -0.4,
-                maxAlpha: 1.4,
-                minSize: 2,
-                maxSize: 10,
-                style: "fill",
-                bounce: false,
-                drift: 0,
-                glow: 0,
-                twinkle: true,
-                color: ["#ffccfe", "#b5eefb", "#95c5f4", "#c2b0e3", "#dff1ff", "#fff"],
-                shape: ["star", "diamond"],
-                imageUrl: "",
-            };
+        let options = {
+            composition: "source-over",
+            count: 250,
+            speed: 0,
+            parallax: 0,
+            direction: 0,
+            xVariance: 0.2,
+            yVariance: 0.2,
+            rotate: false,
+            rotation: 0,
+            alphaSpeed: 4.2,
+            alphaVariance: 6,
+            minAlpha: -0.4,
+            maxAlpha: 1.4,
+            minSize: 2,
+            maxSize: maxSize,
+            style: "fill",
+            bounce: false,
+            drift: 0,
+            glow: 0,
+            twinkle: true,
+            color: ["#ffccfe", "#b5eefb", "#95c5f4", "#c2b0e3", "#dff1ff", "#fff"],
+            shape: ["star", "diamond"],
+            imageUrl: "",
+        };
         window.mySparticles = new Sparticles($main, options);
     };
 });

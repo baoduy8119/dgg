@@ -118,6 +118,11 @@
         @media screen and (max-width: 991px) {
             margin-top: 40px;
         }
+        .card-body {
+            @media screen and (min-width: 992px) {
+                min-height: 300px;
+            }
+        }
     }
     .sun-avatar {
         left: 50px;
@@ -315,7 +320,6 @@
                         @media screen and (min-width: 992px) {
                             opacity: 1;
                         }
-                        
                     }
                 }
                 .readmore {
@@ -428,6 +432,15 @@
         }
     }
 }
+#advisor {
+    background: url(../images/beautiful-shining-stars-night-sky-2.png) no-repeat;
+    background-position: center -180px;
+    background-size: 100%;
+    @media screen and (max-width: 767px) {
+        background-position: center 30px;
+        background-size: 250%;
+    }
+}
 .team-items,
 .advisor-items {
     display: flex;
@@ -494,6 +507,9 @@
 }
 #team {
     position: relative;
+    background: url(../images/beautiful-shining-stars-night-sky.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
     .star-avatar-3 {
         top: 100px;
         left: 50px;
@@ -508,6 +524,32 @@
     }
 }
 .partner {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: 0;
+        right: 0;
+        background: url(../images/beautiful-shining-stars-night-sky-2.png) no-repeat;
+        background-position: center top;
+        height: 1215px;
+        background-size: 100%;
+        @media screen and (max-width: 767px) {
+            background-position: center 30px;
+            background-size: 250%;
+        }
+    }
+    .star-avatar {
+        position: absolute;
+        bottom: -2000px;
+        left: 50px;
+    }
+    .star-avatar-4 {
+        position: absolute;
+        bottom: -2000px;
+        right: 50px;
+    }
     .partner-content {
         @media screen and (max-width: 767px) {
             margin: 20px 0;
@@ -530,6 +572,47 @@
     }
 }
 #alliance {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -600px;
+        left: 0;
+        right: 0;
+        background: url(../images/beautiful-shining-stars-night-sky-2.png) no-repeat;
+        background-position: center top;
+        height: 1148px;
+        background-size: 100%;
+        @media screen and (max-width: 767px) {
+            background-position: center 30px;
+            background-size: 250%;
+        }
+    }
+    .bg {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        height: 1070px;
+        background: url(../images/dark-castle-valley.png) no-repeat center bottom;
+        background-size: 100%;
+        @media screen and (max-width: 767px) {
+            background-size: 200%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100px;
+            background: rgb(8, 14, 23);
+            background: linear-gradient(0deg, rgba(8, 14, 23, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            @media screen and (max-width: 767px) {
+                height: 50px;
+            }
+        }
+    }
     .nav-tabs {
         margin-top: 120px;
     }
@@ -580,6 +663,33 @@
     }
 }
 #roadmap {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -0;
+        left: 0;
+        right: 0;
+        height: 921px;
+        background: url(../images/scenes-horror-canyon.png) no-repeat center bottom;
+        background-size: 100%;
+        @media screen and (max-width: 767px) {
+            background-size: 200%;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 150px;
+        background: rgb(8, 14, 23);
+        background: linear-gradient(0deg, rgba(8, 14, 23, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        @media screen and (max-width: 767px) {
+            height: 50px;
+        }
+    }
     .accordion {
         margin-top: 200px;
         @media screen and (max-width: 767px) {
@@ -611,16 +721,18 @@
 }
 #contact-us {
     .item-list {
-        margin-top: 150px;
+        margin-top: 120px;
         flex-wrap: wrap;
         @media screen and (max-width: 768px) {
             margin-top: 100px;
         }
         .item-wrapper {
+            flex: 0 0 20%;
+            margin: 30px 0;
             @media screen and (max-width: 767px) {
-                margin: 10px 0;
                 flex: 0 0 33.33%;
                 max-width: 33.33%;
+                margin: 10px 0;
             }
             .text {
                 text-align: center;
@@ -651,6 +763,7 @@
         justify-content: center;
         width: 158px;
         height: 158px;
+        margin: 0 auto;
         background: url(../images/contact-item-bg.png) no-repeat center center;
         background-size: 100%;
         @media screen and (max-width: 768px) {
@@ -703,6 +816,12 @@ main {
         max-width: 360px;
     }
 }
+.modal-body {
+    height: 100%;
+    @media screen and (max-width: 767px) {
+        padding: 20px 50px;
+    }
+}
 .modal-content {
     width: 860px;
     height: 744px;
@@ -742,6 +861,7 @@ main {
             height: 304px;
         }
         @media screen and (max-width: 767px) {
+            max-width: 90%;
             height: 180px;
             font-size: 12px;
             overflow-y: auto;
@@ -763,16 +883,17 @@ main {
         }
     }
     .btn {
-        margin-top: 50px;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
         color: white;
         text-shadow: 0px 0px 10px #ff6c00, 0px 0px 10px #ff6c00;
         font-size: 30px;
-        @media screen and (max-width: 1024px) {
-            margin-top: 20px;
-        }
         @media screen and (max-width: 767px) {
             padding: 0;
-            margin-top: 5px;
+            bottom: 20px;
+            font-size: 24px;
         }
     }
 }

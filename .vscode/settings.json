@@ -1,5 +1,5 @@
 {
-    "liveSassCompile.settings.formats":[
+    "liveSassCompile.settings.formats": [
         // You can add more
         {
             "format": "compressed",
@@ -9,6 +9,5 @@
     ],
     "liveSassCompile.settings.generateMap": false,
     "liveServer.settings.port": 5501,
-    "prettier.printWidth": 150,
-    "editor.formatOnSave": true
+    "prettier.printWidth": 150
 }
