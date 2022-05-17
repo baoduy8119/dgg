@@ -661,6 +661,10 @@
             }
         }
     }
+    .dgg-container {
+        position: relative;
+        z-index: 1;
+    }
 }
 #roadmap {
     position: relative;
