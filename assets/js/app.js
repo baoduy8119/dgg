@@ -66,7 +66,7 @@ $(function () {
         $(window).scroll(function (event) {
             if (!isLoaded) {
                 isLoaded = true;
-                for (var i = 1; i <= 8; i++) {
+                for (var i = 1; i <= 9; i++) {
                     new spine.SpinePlayer(`smoke-effect-${i}`, {
                         jsonUrl: "assets/js/spine/smoke-web.json",
                         atlasUrl: "assets/js/spine/smoke-web.atlas",
